@@ -47,18 +47,18 @@
                     <div class="bg-indigo-600 text-white p-2 rounded-xl flex items-center justify-center w-10 h-10">
                         <i class="fa-solid fa-wallet text-xl"></i>
                     </div>
-                    <span class="text-xl font-bold text-gray-900 tracking-wide">SAFI-HOME FINANCE TRACKER</span>
+                    <span class="text-xl font-bold text-gray-900 tracking-wide">safi</span>
                 </div>
                 
                 <nav class="space-y-1" id="sidebarMenu">
-                    <button onclick="switchTab('dashboard')" id="tab-dashboard" class="w-full flex items-center gap-4 px-4 py-2.5 bg-indigo-50 text-indigo-600 rounded-xl font-medium text-left"><i class="fa-solid fa-chart-pie w-5"></i> Dashboard</button>
-                    <button onclick="switchTab('users')" id="tab-users" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-users w-5"></i> Members & Wallets</button>
-                    <button onclick="switchTab('income')" id="tab-income" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-up w-5"></i> Income Ledger</button>
-                    <button onclick="switchTab('expense')" id="tab-expense" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-down w-5"></i> Expense Ledger</button>
-                    <button onclick="switchTab('transfer')" id="tab-transfer" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-money-bill-transfer w-5"></i> Internal Transfer</button>
-                    <button onclick="switchTab('loans')" id="tab-loans" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-hand-holding-dollar w-5"></i> Loans (Taken/Given)</button>
-                    <button onclick="switchTab('vc')" id="tab-vc" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-layer-group w-5"></i> VC Ledger</button>
-                    <button onclick="switchTab('trust')" id="tab-trust" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-building-columns w-5"></i> Ezzy Qardan Hasanah Trust</button>
+                    <button onclick="window.switchTab('dashboard')" id="tab-dashboard" class="w-full flex items-center gap-4 px-4 py-2.5 bg-indigo-50 text-indigo-600 rounded-xl font-medium text-left"><i class="fa-solid fa-chart-pie w-5"></i> Dashboard</button>
+                    <button onclick="window.switchTab('users')" id="tab-users" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-users w-5"></i> Members & Wallets</button>
+                    <button onclick="window.switchTab('income')" id="tab-income" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-up w-5"></i> Income Ledger</button>
+                    <button onclick="window.switchTab('expense')" id="tab-expense" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-down w-5"></i> Expense Ledger</button>
+                    <button onclick="window.switchTab('transfer')" id="tab-transfer" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-money-bill-transfer w-5"></i> Internal Transfer</button>
+                    <button onclick="window.switchTab('loans')" id="tab-loans" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-hand-holding-dollar w-5"></i> Loans (Taken/Given)</button>
+                    <button onclick="window.switchTab('vc')" id="tab-vc" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-layer-group w-5"></i> VC Ledger</button>
+                    <button onclick="window.switchTab('trust')" id="tab-trust" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-500 hover:bg-gray-50 rounded-xl text-left"><i class="fa-solid fa-building-columns w-5"></i> Ezzy Trust</button>
                 </nav>
             </div>
             
@@ -67,36 +67,36 @@
                     <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center font-bold text-indigo-600">M</div>
                     <div><h4 class="text-sm font-semibold">Mustafa</h4><p class="text-xs text-gray-400">Admin</p></div>
                 </div>
-                <button onclick="triggerLogoutLogistics()" class="text-gray-400 hover:text-rose-600" title="Sign Out"><i class="fa-solid fa-power-off"></i></button>
+                <button onclick="window.triggerLogoutLogistics()" class="text-gray-400 hover:text-rose-600" title="Sign Out"><i class="fa-solid fa-power-off"></i></button>
             </div>
         </div>
 
-        <div id="mobileDrawerBackdrop" class="fixed inset-0 bg-gray-900 bg-opacity-40 z-40 hidden transition-opacity duration-300 opacity-0" onclick="toggleMobileMenu(false)"></div>
+        <div id="mobileDrawerBackdrop" class="fixed inset-0 bg-gray-900 bg-opacity-40 z-40 hidden transition-opacity duration-300 opacity-0" onclick="window.toggleMobileMenu(false)"></div>
         <div id="mobileSideDrawer" class="fixed inset-y-0 left-0 w-64 bg-white z-50 transform -translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between md:hidden">
             <div>
                 <div class="flex justify-between items-center mb-6">
-                    <span class="text-xl font-bold text-gray-900">SAFI-HOME FINANCE TRACKER</span>
-                    <button onclick="toggleMobileMenu(false)" class="text-gray-400"><i class="fa-solid fa-xmark text-lg"></i></button>
+                    <span class="text-xl font-bold text-gray-900">safi menu</span>
+                    <button onclick="window.toggleMobileMenu(false)" class="text-gray-400"><i class="fa-solid fa-xmark text-lg"></i></button>
                 </div>
                 <nav class="space-y-1" id="mobileDrawerMenu">
-                    <button onclick="switchTab('dashboard'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-chart-pie w-5"></i> Dashboard</button>
-                    <button onclick="switchTab('users'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-users w-5"></i> Members & Wallets</button>
-                    <button onclick="switchTab('income'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-up w-5"></i> Income Ledger</button>
-                    <button onclick="switchTab('expense'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-down w-5"></i> Expense Ledger</button>
-                    <button onclick="switchTab('transfer'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-money-bill-transfer w-5"></i> Internal Transfer</button>
-                    <button onclick="switchTab('loans'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-hand-holding-dollar w-5"></i> Loans</button>
-                    <button onclick="switchTab('vc'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-layer-group w-5"></i> VC Ledger</button>
-                    <button onclick="switchTab('trust'); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-building-columns w-5"></i> Ezzy Qardan Hasanah Trust</button>
+                    <button onclick="window.switchTab('dashboard'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-chart-pie w-5"></i> Dashboard</button>
+                    <button onclick="window.switchTab('users'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-users w-5"></i> Members & Wallets</button>
+                    <button onclick="window.switchTab('income'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-up w-5"></i> Income Ledger</button>
+                    <button onclick="window.switchTab('expense'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-arrow-trend-down w-5"></i> Expense Ledger</button>
+                    <button onclick="window.switchTab('transfer'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-money-bill-transfer w-5"></i> Internal Transfer</button>
+                    <button onclick="window.switchTab('loans'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-hand-holding-dollar w-5"></i> Loans</button>
+                    <button onclick="window.switchTab('vc'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-layer-group w-5"></i> VC Ledger</button>
+                    <button onclick="window.switchTab('trust'); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-gray-600 rounded-xl text-left"><i class="fa-solid fa-building-columns w-5"></i> Ezzy Trust</button>
                 </nav>
             </div>
-            <button onclick="triggerLogoutLogistics(); toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-rose-500 hover:bg-rose-50 rounded-xl text-left font-semibold"><i class="fa-solid fa-power-off w-5"></i> Log Out</button>
+            <button onclick="window.triggerLogoutLogistics(); window.toggleMobileMenu(false);" class="w-full flex items-center gap-4 px-4 py-2.5 text-rose-500 hover:bg-rose-50 rounded-xl text-left font-semibold"><i class="fa-solid fa-power-off w-5"></i> Log Out</button>
         </div>
 
         <div class="flex-1 flex flex-col overflow-y-auto">
             
             <header class="bg-white border-b border-gray-200 px-6 md:px-8 py-4 flex justify-between items-center sticky top-0 z-10">
                 <div class="flex items-center gap-3">
-                    <button onclick="toggleMobileMenu(true)" class="md:hidden text-gray-600 bg-gray-50 p-2 rounded-xl border border-gray-200"><i class="fa-solid fa-bars text-md"></i></button>
+                    <button onclick="window.toggleMobileMenu(true)" class="md:hidden text-gray-600 bg-gray-50 p-2 rounded-xl border border-gray-200"><i class="fa-solid fa-bars text-md"></i></button>
                     <div>
                         <h1 class="text-lg md:text-xl font-bold text-gray-900" id="pageTitle">Dashboard Overview</h1>
                         <p class="text-xs text-gray-400 mt-0.5" id="pageSubtitle">Family financial core portfolio maps</p>
@@ -106,10 +106,10 @@
                 <div class="flex items-center gap-4">
                     <div id="headerDateFilterContainer" class="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-200 hidden">
                         <i class="fa-solid fa-calendar-days text-gray-400 text-xs"></i>
-                        <input type="date" id="globalDateFilter" onchange="renderAllData()" class="bg-transparent border-none text-xs outline-none text-gray-700 cursor-pointer">
-                        <button onclick="clearDateFilter()" class="text-xs text-gray-400 hover:text-gray-600 font-medium">Clear</button>
+                        <input type="date" id="globalDateFilter" onchange="window.renderAllData()" class="bg-transparent border-none text-xs outline-none text-gray-700 cursor-pointer">
+                        <button onclick="window.clearDateFilter()" class="text-xs text-gray-400 hover:text-gray-600 font-medium">Clear</button>
                     </div>
-                    <button id="headerActionButton" onclick="openCurrentModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm font-medium shadow-sm hidden"></button>
+                    <button id="headerActionButton" onclick="window.openCurrentModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm font-medium shadow-sm hidden"></button>
                 </div>
             </header>
 
@@ -147,7 +147,7 @@
                     </div>
 
                     <div class="bg-white p-4 md:p-6 rounded-2xl border border-gray-100 shadow-sm">
-                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-indigo-500 mr-2"></i> Live Wallets Availability</h4>
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-indigo-500 mr-2"></i> Real-time Member Hand Wallets</h4>
                         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4" id="dashboardWalletsGrid"></div>
                     </div>
                 </div>
@@ -182,12 +182,12 @@
 
     <div id="globalModalBackdrop" class="fixed inset-0 bg-gray-900 bg-opacity-40 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
         <div id="modalContainer" class="bg-white rounded-2xl p-6 max-w-md w-full shadow-xl transform scale-95 transition-transform duration-300 relative mx-4 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <button onclick="window.closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark text-lg"></i></button>
             <input type="hidden" id="editEntryId" value="">
 
             <div id="form-users" class="modal-form-content hidden">
                 <h3 class="text-lg font-bold text-gray-900 mb-4" id="modalUserTitle">Add Family Member</h3>
-                <form onsubmit="handleFormSubmitWrapper(event, 'users')" class="space-y-4">
+                <form onsubmit="window.handleFormSubmitWrapper(event, 'users')" class="space-y-4">
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Member Name</label><input type="text" id="uName" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Opening Cash/Bank Balance</label><input type="number" id="uBalance" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
                     <button type="submit" class="w-full bg-indigo-600 text-white py-2.5 rounded-xl text-sm font-semibold">Save Member Account</button>
@@ -196,7 +196,7 @@
 
             <div id="form-income" class="modal-form-content hidden">
                 <h3 class="text-lg font-bold text-gray-900 mb-4" id="modalIncomeTitle">Log Revenue Income</h3>
-                <form onsubmit="handleFormSubmitWrapper(event, 'income')" class="space-y-4">
+                <form onsubmit="window.handleFormSubmitWrapper(event, 'income')" class="space-y-4">
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Select Member Account</label><select id="incUser" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select></div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Amount (₹)</label><input type="number" id="incAmount" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
                     <div class="grid grid-cols-2 gap-4">
@@ -209,7 +209,7 @@
 
             <div id="form-expense" class="modal-form-content hidden">
                 <h3 class="text-lg font-bold text-gray-900 mb-4" id="modalExpenseTitle">Log Outgoing Expense</h3>
-                <form onsubmit="handleFormSubmitWrapper(event, 'expenses')" class="space-y-4">
+                <form onsubmit="window.handleFormSubmitWrapper(event, 'expenses')" class="space-y-4">
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Spent From Whose Wallet?</label><select id="expUser" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select></div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Amount (₹)</label><input type="number" id="expAmount" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
                     <div class="grid grid-cols-2 gap-4">
@@ -222,7 +222,7 @@
 
             <div id="form-transfer" class="modal-form-content hidden">
                 <h3 class="text-lg font-bold text-gray-900 mb-4" id="modalTransferTitle">Internal Money Transfer</h3>
-                <form onsubmit="handleFormSubmitWrapper(event, 'transfers')" class="space-y-4">
+                <form onsubmit="window.handleFormSubmitWrapper(event, 'transfers')" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">From (Sender)</label><select id="trnFromUser" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select></div>
                         <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">To (Receiver)</label><select id="trnToUser" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select></div>
@@ -235,18 +235,18 @@
 
             <div id="form-loans" class="modal-form-content hidden">
                 <h3 class="text-lg font-bold text-gray-900 mb-2" id="modalLoanTitle">Create Loan Account File</h3>
-                <form onsubmit="handleFormSubmitWrapper(event, 'loans')" class="space-y-4">
+                <form onsubmit="window.handleFormSubmitWrapper(event, 'loans')" class="space-y-4">
                     <div class="bg-gray-50 p-1.5 rounded-xl flex gap-2 border border-gray-100">
-                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer bg-white shadow-sm text-gray-800" id="lblLoanTaken"><input type="radio" name="loanType" value="Taken" checked onchange="toggleLoanTypeStyle()" class="hidden"> Loan Taken (Liya)</label>
-                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer text-gray-400" id="lblLoanGiven"><input type="radio" name="loanType" value="Given" onchange="toggleLoanTypeStyle()" class="hidden"> Loan Given (Diya)</label>
+                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer bg-white shadow-sm text-gray-800" id="lblLoanTaken"><input type="radio" name="loanType" value="Taken" checked onchange="window.toggleLoanTypeStyle()" class="hidden"> Loan Taken (Liya)</label>
+                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer text-gray-400" id="lblLoanGiven"><input type="radio" name="loanType" value="Given" onchange="window.toggleLoanTypeStyle()" class="hidden"> Loan Given (Diya)</label>
                     </div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Responsible Family Member</label><select id="loanUser" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select></div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><label class="block text-xs font-semibold text-gray-500 uppercase">Lender / Borrower Party</label><button type="button" onclick="promptQuickLender()" class="text-xs font-bold text-indigo-600 hover:underline">+ Create New Party</button></div>
+                        <div class="flex justify-between items-center mb-1"><label class="block text-xs font-semibold text-gray-500 uppercase">Lender / Borrower Party</label><button type="button" onclick="window.promptQuickLender()" class="text-xs font-bold text-indigo-600 hover:underline">+ Create New Party</button></div>
                         <select id="loanProvider" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
-                        <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Total Amount</label><input type="number" id="loanTotal" required oninput="handleLoanTotalInput(this.value)" class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
+                        <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Total Amount</label><input type="number" id="loanTotal" required oninput="window.handleLoanTotalInput(this.value)" class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
                         <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Current Balance Due</label><input type="number" id="loanRemaining" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
                     </div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">As Of Date</label><input type="date" id="loanDate" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
@@ -256,14 +256,14 @@
 
             <div id="form-vc" class="modal-form-content hidden">
                 <h3 class="text-lg font-bold text-gray-900 mb-4" id="modalVCTitle">Log VC Fund Entry</h3>
-                <form onsubmit="handleFormSubmitWrapper(event, 'vc')" class="space-y-4">
+                <form onsubmit="window.handleFormSubmitWrapper(event, 'vc')" class="space-y-4">
                     <div class="bg-gray-50 p-1.5 rounded-xl flex gap-2 border border-gray-100">
-                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer bg-white shadow-sm text-gray-800" id="lblVCPaid"><input type="radio" name="vcType" value="Paid" checked onchange="toggleVCTypeStyle()" class="hidden"> Monthly Paid (Kisht)</label>
-                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer text-gray-400" id="lblVCRec"><input type="radio" name="vcType" value="Received" onchange="toggleVCTypeStyle()" class="hidden"> VC Opened (Paise Mile)</label>
+                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer bg-white shadow-sm text-gray-800" id="lblVCPaid"><input type="radio" name="vcType" value="Paid" checked onchange="window.toggleVCTypeStyle()" class="hidden"> Monthly Paid (Kisht)</label>
+                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer text-gray-400" id="lblVCRec"><input type="radio" name="vcType" value="Received" onchange="window.toggleVCTypeStyle()" class="hidden"> VC Opened (Paise Mile)</label>
                     </div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Select Family Member</label><select id="vcUser" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select></div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><label class="block text-xs font-semibold text-gray-500 uppercase">VC Name Pool</label><button type="button" onclick="promptQuickVCName()" class="text-xs font-bold text-indigo-600 hover:underline">+ Create New VC</button></div>
+                        <div class="flex justify-between items-center mb-1"><label class="block text-xs font-semibold text-gray-500 uppercase">VC Name Pool</label><button type="button" onclick="window.promptQuickVCName()" class="text-xs font-bold text-indigo-600 hover:underline">+ Create New VC</button></div>
                         <select id="vcNameDropdown" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select>
                     </div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Amount (₹)</label><input type="number" id="vcAmount" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
@@ -274,10 +274,10 @@
 
             <div id="form-trust" class="modal-form-content hidden">
                 <h3 class="text-lg font-bold text-gray-900 mb-4" id="modalTrustTitle">Ezzy Trust Operations</h3>
-                <form onsubmit="handleFormSubmitWrapper(event, 'trust')" class="space-y-4">
+                <form onsubmit="window.handleFormSubmitWrapper(event, 'trust')" class="space-y-4">
                     <div class="bg-gray-50 p-1.5 rounded-xl flex gap-2 border border-gray-100">
-                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer bg-white shadow-sm text-gray-800" id="lblTrustDeposit"><input type="radio" name="trustType" value="Deposit" checked onchange="toggleTrustTypeStyle()" class="hidden"> Deposit (Jama)</label>
-                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer text-gray-400" id="lblTrustWithdraw"><input type="radio" name="trustType" value="Withdraw" onchange="toggleTrustTypeStyle()" class="hidden"> Withdraw (Nikala)</label>
+                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer bg-white shadow-sm text-gray-800" id="lblTrustDeposit"><input type="radio" name="trustType" value="Deposit" checked onchange="window.toggleTrustTypeStyle()" class="hidden"> Deposit (Jama)</label>
+                        <label class="flex-1 text-center py-1.5 rounded-lg text-xs font-bold cursor-pointer text-gray-400" id="lblTrustWithdraw"><input type="radio" name="trustType" value="Withdraw" onchange="window.toggleTrustTypeStyle()" class="hidden"> Withdraw (Nikala)</label>
                     </div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Family Member Profile</label><select id="trustUser" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm bg-white outline-none"></select></div>
                     <div class="grid grid-cols-2 gap-4">
@@ -296,14 +296,14 @@
                     <input type="hidden" id="paybackCurrentRemaining" value="0">
                     <div>
                         <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Payment Amount (₹)</label>
-                        <input type="number" id="paybackAmount" required oninput="calculateLivePaybackRemaining(this.value)" class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none" placeholder="e.g. 3000">
+                        <input type="number" id="paybackAmount" required oninput="window.calculateLivePaybackRemaining(this.value)" class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none" placeholder="e.g. 3000">
                     </div>
                     <div class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-xs space-y-1">
                         <div class="flex justify-between text-gray-500"><span>Current Due:</span><span id="pbLabelCurrent">₹0</span></div>
                         <div class="flex justify-between font-bold text-gray-800 border-t border-gray-200 pt-1"><span>New Remaining Due:</span><span id="pbLabelNewRemaining" class="text-rose-600">₹0</span></div>
                     </div>
                     <div><label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Date</label><input type="date" id="paybackDate" required class="w-full px-4 py-2 border border-gray-200 rounded-xl text-sm outline-none"></div>
-                    <button type="button" onclick="executePaybackPostingEngine()" class="w-full bg-emerald-600 text-white py-2.5 rounded-xl text-sm font-semibold">Post Repayment Entry</button>
+                    <button type="button" onclick="window.executePaybackPostingEngine()" class="w-full bg-emerald-600 text-white py-2.5 rounded-xl text-sm font-semibold">Post Repayment Entry</button>
                 </form>
             </div>
 
@@ -311,20 +311,19 @@
     </div>
 
     <script type="module">
-        // Firebase Modular CDN imports
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-        import { getFirestore, collection, doc, setDoc, addDoc, getDocs, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { getFirestore, collection, doc, setDoc, addDoc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
         // ⚠️ YAHA APNI FIREBASE CONFIG COPY-PASTE KAREIN
-        const firebaseConfig = {
-                apiKey: "AIzaSyCWco2lP70IHiJZAtO3geie951wMW-nD7w",
-                authDomain: "safi-dashboard-6b762.firebaseapp.com",
-                projectId: "safi-dashboard-6b762",
-                storageBucket: "safi-dashboard-6b762.firebasestorage.app",
-                messagingSenderId: "245399962722",
-                appId: "1:245399962722:web:992dc6c4e7dd4cb05c7d3b",
-                measurementId: "G-VB7S9HM5ZH"
+       const firebaseConfig = {
+              apiKey: "AIzaSyCWco2lP70IHiJZAtO3geie951wMW-nD7w",
+              authDomain: "safi-dashboard-6b762.firebaseapp.com",
+              projectId: "safi-dashboard-6b762",
+              storageBucket: "safi-dashboard-6b762.firebasestorage.app",
+              messagingSenderId: "245399962722",
+              appId: "1:245399962722:web:992dc6c4e7dd4cb05c7d3b",
+              measurementId: "G-VB7S9HM5ZH"
             };
 
 
@@ -332,10 +331,10 @@
         const auth = getAuth(app);
         const db = getFirestore(app);
 
-        // Core Global App State Matrix
         let state = { users: [], income: [], expenses: [], transfers: [], loans: [], loanHistory: [], vc: [], trust: [], lenders: [], vcPoolNames: [] };
+        let currentActiveTab = 'dashboard';
 
-        // --- AUTH SYSTEMS LISTENER LINK ---
+        // Bind core listeners
         document.getElementById('authLoginForm').addEventListener('submit', (e) => {
             e.preventDefault();
             signInWithEmailAndPassword(auth, document.getElementById('loginEmail').value, document.getElementById('loginPassword').value)
@@ -357,7 +356,6 @@
             }
         });
 
-        // --- MOBILE RESPONSE LOGIC ---
         window.toggleMobileMenu = function(open) {
             const sideDrawer = document.getElementById('mobileSideDrawer');
             const backdrop = document.getElementById('mobileDrawerBackdrop');
@@ -370,7 +368,6 @@
             }
         };
 
-        // --- LIVE SNAPSHOT SYNCHRONIZER ENGINE ---
         function initializeLiveFirestoreListeners() {
             const collections = ['users', 'income', 'expenses', 'transfers', 'loans', 'loanHistory', 'vc', 'trust', 'lenders', 'vcPoolNames'];
             collections.forEach(colKey => {
@@ -378,12 +375,11 @@
                     let items = [];
                     snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
                     state[colKey] = items;
-                    renderAllData();
+                    window.renderAllData();
                 });
             });
         }
 
-        // --- CORE DATA SUBMISSION MULTIPLEXER ---
         window.handleFormSubmitWrapper = async function(e, type) {
             e.preventDefault();
             const editId = document.getElementById('editEntryId').value;
@@ -407,12 +403,9 @@
             }
 
             try {
-                if(editId) {
-                    await setDoc(doc(db, type, editId), payload);
-                } else {
-                    await addDoc(collection(db, type), payload);
-                }
-                closeModal();
+                if(editId) { await setDoc(doc(db, type, editId), payload); } 
+                else { await addDoc(collection(db, type), payload); }
+                window.closeModal();
             } catch (err) { alert("Database Error: " + err.message); }
         };
 
@@ -422,7 +415,7 @@
             const date = document.getElementById('paybackDate').value;
             
             let loan = state.loans.find(l => l.id === loanId);
-            if(!loan || amt > loan.remaining) { alert("Invalid Amount Entry parameters!"); return; }
+            if(!loan || amt > loan.remaining) { alert("Invalid Parameters!"); return; }
 
             try {
                 if(loan.type === 'Taken') {
@@ -430,15 +423,14 @@
                 } else {
                     await addDoc(collection(db, 'income'), { userId: loan.userId, amount: amt, source: `Loan Recovery: ${loan.provider}`, date: date });
                 }
-
                 await addDoc(collection(db, 'loanHistory'), { loanId, providerName: loan.provider, userName: state.users.find(u => u.id === loan.userId)?.name || 'Member', type: loan.type, amount: amt, date });
                 await setDoc(doc(db, 'loans', loanId), { ...loan, remaining: loan.remaining - amt });
-                closeModal();
+                window.closeModal();
             } catch(err) { alert(err.message); }
         };
 
         window.executeDelete = async function(col, id) {
-            if(confirm("Permanently delete this item from database logs?")) await deleteDoc(doc(db, col, id));
+            if(confirm("Permanently delete item?")) await deleteDoc(doc(db, col, id));
         };
 
         window.promptQuickLender = async function() {
@@ -451,33 +443,19 @@
             if(name && name.trim() !== '') await addDoc(collection(db, 'vcPoolNames'), { name: name.trim() });
         };
 
-        // --- ATTACH WINDOW TAB NAVIGATION ROUTERS ---
-        window.switchTab = switchTab;
-        window.openCurrentModal = openCurrentModal;
-        window.closeModal = closeModal;
-        window.clearDateFilter = clearDateFilter;
-        window.triggerEdit = triggerEdit;
-        window.openPaybackModal = openPaybackModal;
-        window.handleLoanTotalInput = handleLoanTotalInput;
-        window.calculateLivePaybackRemaining = calculateLivePaybackRemaining;
-        window.toggleLoanTypeStyle = toggleLoanTypeStyle;
-        window.toggleVCTypeStyle = toggleVCTypeStyle;
-        window.toggleTrustTypeStyle = toggleTrustTypeStyle;
-        window.renderAllData = renderAllData;
-
-        // ================= DYNAMIC PRESENTATION DRAW SYSTEMS =================
-        function switchTab(tabId) {
+        // --- GLOBAL WIN WINDOW BINDINGS (FIXED HOT ROUTE BUG) ---
+        window.switchTab = function(tabId) {
             currentActiveTab = tabId;
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.getElementById(`content-${tabId}`).classList.remove('hidden');
             
             const setups = {
-                dashboard: {t: 'Dashboard Ledger Grid', s: 'Consolidated parivar transactions summary boards'},
+                dashboard: {t: 'Dashboard Overview Matrix', s: 'Consolidated parivar transactions summary boards'},
                 users: {t: 'Family Profiles & Wallets', s: 'Manage opening setup balance profiles across wallets'},
                 income: {t: 'Revenue Income Statements', s: 'Itemized historical credits lists'},
                 expense: {t: 'Debit Expenditure Logs', s: 'Track complete transactional categories'},
                 transfer: {t: 'Internal P2P Transfers Ledger', s: 'Review local internal movements'},
-                loans: {t: 'Loan System & Repayment Portfolios', s: 'Manage Borrowed & Lent outstanding logs with payment history'},
+                loans: {t: 'Loan System & Repayment Portfolios', s: 'Manage outstanding logs with payment history'},
                 vc: {t: 'VC Chit Fund Statement Log Portfolio', s: 'Track monthly committee premium records'},
                 trust: {t: 'Ezzy Qardan hasanah Trust Vault', s: 'Unified trust box savings balance records'}
             };
@@ -501,61 +479,63 @@
             const activeBtn = document.getElementById(`tab-${tabId}`);
             if(activeBtn) { activeBtn.classList.add('bg-indigo-50', 'text-indigo-600'); activeBtn.classList.remove('text-gray-500'); }
 
-            renderAllData();
-        }
+            window.renderAllData();
+        };
 
-        function clearDateFilter() { document.getElementById('globalDateFilter').value = ''; renderAllData(); }
+        window.clearDateFilter = function() { document.getElementById('globalDateFilter').value = ''; window.renderAllData(); };
+        
         function getFilteredData(arr) {
             const fDate = document.getElementById('globalDateFilter').value;
             if (!fDate) return arr;
             return arr.filter(item => item.date === fDate);
         }
 
-        function openCurrentModal(targetFormId = null) {
+        window.openCurrentModal = function(targetFormId = null) {
             document.querySelectorAll('.modal-form-content').forEach(el => el.classList.add('hidden'));
             if (!targetFormId) {
                 document.getElementById('editEntryId').value = '';
                 const f = document.querySelector(`#form-${currentActiveTab} form`); if (f) f.reset();
-                toggleLoanTypeStyle(); toggleVCTypeStyle(); toggleTrustTypeStyle();
+                window.toggleLoanTypeStyle(); window.toggleVCTypeStyle(); window.toggleTrustTypeStyle();
             }
             const idToOpen = targetFormId || `form-${currentActiveTab}`;
             document.getElementById(idToOpen).classList.remove('hidden');
             const bdrop = document.getElementById('globalModalBackdrop'); const cont = document.getElementById('modalContainer');
             bdrop.classList.remove('hidden'); setTimeout(() => { bdrop.classList.remove('opacity-0'); cont.classList.remove('scale-95'); }, 5);
-        }
+        };
 
-        function closeModal() {
+        window.closeModal = function() {
             const bdrop = document.getElementById('globalModalBackdrop'); const cont = document.getElementById('modalContainer');
             bdrop.classList.add('opacity-0'); cont.classList.add('scale-95'); setTimeout(() => bdrop.classList.add('hidden'), 300);
-        }
+        };
 
-        function toggleLoanTypeStyle() {
+        window.toggleLoanTypeStyle = function() {
             const checkedRad = document.querySelector('input[name="loanType"]:checked'); if(!checkedRad) return;
             const t = checkedRad.value; const taken = document.getElementById('lblLoanTaken'); const given = document.getElementById('lblLoanGiven');
             if(t === 'Taken') { taken.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold bg-white shadow-sm text-gray-800"; given.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold text-gray-400"; }
             else { given.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold bg-white shadow-sm text-gray-800"; taken.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold text-gray-400"; }
-        }
+        };
 
-        function toggleVCTypeStyle() {
+        window.toggleVCTypeStyle = function() {
             const checkedRad = document.querySelector('input[name="vcType"]:checked'); if(!checkedRad) return;
             const val = checkedRad.value; const paid = document.getElementById('lblVCPaid'); const rec = document.getElementById('lblVCRec');
             if(val === 'Paid') { paid.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold bg-white shadow-sm text-gray-800"; rec.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold text-gray-400"; }
             else { rec.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold bg-white shadow-sm text-gray-800"; paid.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold text-gray-400"; }
-        }
+        };
 
-        function toggleTrustTypeStyle() {
+        window.toggleTrustTypeStyle = function() {
             const checkedRad = document.querySelector('input[name="trustType"]:checked'); if(!checkedRad) return;
             const val = checkedRad.value; const dep = document.getElementById('lblTrustDeposit'); const withD = document.getElementById('lblTrustWithdraw');
             if(val === 'Deposit') { dep.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold bg-white shadow-sm text-gray-800"; withD.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold text-gray-400"; }
             else { withD.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold bg-white shadow-sm text-gray-800"; dep.className = "flex-1 text-center py-1.5 rounded-lg text-xs font-bold text-gray-400"; }
-        }
+        };
 
-        function handleLoanTotalInput(val) { if(!document.getElementById('editEntryId').value) document.getElementById('loanRemaining').value = val; }
-        function calculateLivePaybackRemaining(payAmt) {
+        window.handleLoanTotalInput = function(val) { if(!document.getElementById('editEntryId').value) document.getElementById('loanRemaining').value = val; };
+        
+        window.calculateLivePaybackRemaining = function(payAmt) {
             const currentDue = parseFloat(document.getElementById('paybackCurrentRemaining').value) || 0;
             const computedNewRemaining = Math.max(0, currentDue - (parseFloat(payAmt) || 0));
             document.getElementById('pbLabelNewRemaining').innerText = '₹' + computedNewRemaining.toLocaleString('en-IN');
-        }
+        };
 
         function calculateUserWallet(userId) {
             let u = state.users.find(usr => usr.id === userId); if (!u) return 0;
@@ -570,40 +550,41 @@
             return u.openingBalance + inc + rec + vcRec + trustWith - exp - sent - vcPaid - trustDep;
         }
 
-        function triggerEdit(colKey, id) {
+        window.triggerEdit = function(colKey, id) {
             document.getElementById('editEntryId').value = id;
             let obj = state[colKey].find(item => item.id === id);
             if(colKey === 'users') {
-                document.getElementById('uName').value = obj.name; document.getElementById('uBalance').value = obj.openingBalance; openCurrentModal('form-users');
+                document.getElementById('uName').value = obj.name; document.getElementById('uBalance').value = obj.openingBalance; window.openCurrentModal('form-users');
             } else if(colKey === 'income') {
-                document.getElementById('incUser').value = obj.userId; document.getElementById('incAmount').value = obj.amount; document.getElementById('incSource').value = obj.source; document.getElementById('incDate').value = obj.date; openCurrentModal('form-income');
+                document.getElementById('incUser').value = obj.userId; document.getElementById('incAmount').value = obj.amount; document.getElementById('incSource').value = obj.source; document.getElementById('incDate').value = obj.date; window.openCurrentModal('form-income');
             } else if(colKey === 'expenses') {
-                document.getElementById('expUser').value = obj.userId; document.getElementById('expAmount').value = obj.amount; document.getElementById('expCategory').value = obj.category; document.getElementById('expDate').value = obj.date; openCurrentModal('form-expense');
+                document.getElementById('expUser').value = obj.userId; document.getElementById('expAmount').value = obj.amount; document.getElementById('expCategory').value = obj.category; document.getElementById('expDate').value = obj.date; window.openCurrentModal('form-expense');
             } else if(colKey === 'transfers') {
-                document.getElementById('trnFromUser').value = obj.fromId; document.getElementById('trnToUser').value = obj.toId; document.getElementById('trnAmount').value = obj.amount; document.getElementById('trnDate').value = obj.date; openCurrentModal('form-transfer');
+                document.getElementById('trnFromUser').value = obj.fromId; document.getElementById('trnToUser').value = obj.toId; document.getElementById('trnAmount').value = obj.amount; document.getElementById('trnDate').value = obj.date; window.openCurrentModal('form-transfer');
             } else if(colKey === 'loans') {
-                document.querySelector(`input[name="loanType"][value="${obj.type}"]`).checked = true; toggleLoanTypeStyle();
-                document.getElementById('loanUser').value = obj.userId; document.getElementById('loanProvider').value = obj.provider; document.getElementById('loanTotal').value = obj.total; document.getElementById('loanRemaining').value = obj.remaining; document.getElementById('loanDate').value = obj.date; openCurrentModal('form-loans');
+                document.querySelector(`input[name="loanType"][value="${obj.type}"]`).checked = true; window.toggleLoanTypeStyle();
+                document.getElementById('loanUser').value = obj.userId; document.getElementById('loanProvider').value = obj.provider; document.getElementById('loanTotal').value = obj.total; document.getElementById('loanRemaining').value = obj.remaining; document.getElementById('loanDate').value = obj.date; window.openCurrentModal('form-loans');
             } else if(colKey === 'vc') {
-                document.querySelector(`input[name="vcType"][value="${obj.type}"]`).checked = true; toggleVCTypeStyle();
-                document.getElementById('vcUser').value = obj.userId; document.getElementById('vcNameDropdown').value = obj.name; document.getElementById('vcAmount').value = obj.amount; document.getElementById('vcDate').value = obj.date; openCurrentModal('form-vc');
+                document.querySelector(`input[name="vcType"][value="${obj.type}"]`).checked = true; window.toggleVCTypeStyle();
+                document.getElementById('vcUser').value = obj.userId; document.getElementById('vcNameDropdown').value = obj.name; document.getElementById('vcAmount').value = obj.amount; document.getElementById('vcDate').value = obj.date; window.openCurrentModal('form-vc');
             } else if(colKey === 'trust') {
-                document.querySelector(`input[name="trustType"][value="${obj.type}"]`).checked = true; toggleTrustTypeStyle();
-                document.getElementById('trustUser').value = obj.userId; document.getElementById('trustAmount').value = obj.amount; document.getElementById('trustDate').value = obj.date; openCurrentModal('form-trust');
+                document.querySelector(`input[name="trustType"][value="${obj.type}"]`).checked = true; window.toggleTrustTypeStyle();
+                document.getElementById('trustUser').value = obj.userId; document.getElementById('trustAmount').value = obj.amount; document.getElementById('trustDate').value = obj.date; window.openCurrentModal('form-trust');
             }
-        }
+        };
 
-        function openPaybackModal(loanId) {
+        window.openPaybackModal = function(loanId) {
             let l = state.loans.find(loan => loan.id === loanId); if(!l) return;
             document.getElementById('paybackLoanId').value = loanId; document.getElementById('paybackCurrentRemaining').value = l.remaining;
             document.getElementById('paybackSubtitle').innerText = `${l.type === 'Taken' ? 'Repaying Back To' : 'Recovering From'} ${l.provider}`;
             document.getElementById('pbLabelCurrent').innerText = '₹' + l.remaining.toLocaleString('en-IN');
             document.getElementById('pbLabelNewRemaining').innerText = '₹' + l.remaining.toLocaleString('en-IN');
             document.getElementById('paybackAmount').value = '';
-            openCurrentModal('form-payback');
-        }
+            window.openCurrentModal('form-payback');
+        };
 
-        function renderAllData() {
+        window.renderAllData = function() {
+            updateDropdowns();
             let totalOpening = state.users.reduce((acc, curr) => acc + curr.openingBalance, 0);
             let totalInc = state.income.reduce((acc, curr) => acc + curr.amount, 0);
             let totalExp = state.expenses.reduce((acc, curr) => acc + curr.amount, 0);
@@ -628,62 +609,54 @@
                 miniGrid.innerHTML += `<div class="p-3 bg-gray-50 border border-gray-100 rounded-xl"><p class="text-xs text-gray-400 font-medium truncate">${u.name}</p><h5 class="text-sm font-bold mt-0.5 ${bal >= 0 ? 'text-emerald-600' : 'text-rose-600'}">₹${bal.toLocaleString('en-IN')}</h5></div>`;
             });
 
-            // Populate Users Statement Rows
             const userTable = document.getElementById('usersTableBody'); userTable.innerHTML = state.users.length ? '' : '<tr><td colspan="4" class="py-4 text-center text-gray-400">No records found.</td></tr>';
             state.users.forEach(u => {
                 let cur = calculateUserWallet(u.id);
-                userTable.innerHTML += `<tr><td class="py-3 font-semibold text-gray-900">${u.name}</td><td class="py-3 text-gray-500">₹${u.openingBalance.toLocaleString('en-IN')}</td><td class="py-3 font-bold ${cur >= 0 ? 'text-emerald-600' : 'text-rose-600'}">₹${cur.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="triggerEdit('users', '${u.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="executeDelete('users', '${u.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                userTable.innerHTML += `<tr><td class="py-3 font-semibold text-gray-900">${u.name}</td><td class="py-3 text-gray-500">₹${u.openingBalance.toLocaleString('en-IN')}</td><td class="py-3 font-bold ${cur >= 0 ? 'text-emerald-600' : 'text-rose-600'}">₹${cur.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="window.triggerEdit('users', '${u.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="window.executeDelete('users', '${u.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
 
-            // Populate Income Statement Rows
             const incTable = document.getElementById('incomeTableBody'); let fInc = getFilteredData(state.income); incTable.innerHTML = fInc.length ? '' : '<tr><td colspan="5" class="py-4 text-center text-gray-400">No matching entries.</td></tr>';
             fInc.forEach(i => {
                 let u = state.users.find(usr => usr.id === i.userId);
-                incTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${i.date}</td><td class="py-3 font-medium">${u ? u.name : 'System'}</td><td class="py-3 text-gray-600">${i.source}</td><td class="py-3 font-bold text-emerald-600">₹${i.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="triggerEdit('income', '${i.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="executeDelete('income', '${i.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                incTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${i.date}</td><td class="py-3 font-medium">${u ? u.name : 'System'}</td><td class="py-3 text-gray-600">${i.source}</td><td class="py-3 font-bold text-emerald-600">₹${i.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="window.triggerEdit('income', '${i.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="window.executeDelete('income', '${i.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
 
-            // Populate Expense Statement Rows
             const expTable = document.getElementById('expenseTableBody'); let fExp = getFilteredData(state.expenses); expTable.innerHTML = fExp.length ? '' : '<tr><td colspan="5" class="py-4 text-center text-gray-400">No matching entries.</td></tr>';
             fExp.forEach(e => {
                 let u = state.users.find(usr => usr.id === e.userId);
-                expTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${e.date}</td><td class="py-3 font-medium">${u ? u.name : 'System'}</td><td class="py-3 text-gray-600">${e.category}</td><td class="py-3 font-bold text-rose-600">₹${e.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="triggerEdit('expenses', '${e.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="executeDelete('expenses', '${e.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                expTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${e.date}</td><td class="py-3 font-medium">${u ? u.name : 'System'}</td><td class="py-3 text-gray-600">${e.category}</td><td class="py-3 font-bold text-rose-600">₹${e.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="window.triggerEdit('expenses', '${e.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="window.executeDelete('expenses', '${e.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
 
-            // Populate P2P Transfers Rows
             const trnTable = document.getElementById('transferTableBody'); let fTrn = getFilteredData(state.transfers); trnTable.innerHTML = fTrn.length ? '' : '<tr><td colspan="5" class="py-4 text-center text-gray-400">No transfers documented.</td></tr>';
             fTrn.forEach(t => {
                 let fObj = state.users.find(usr => usr.id === t.fromId); let toObj = state.users.find(usr => usr.id === t.toId);
-                trnTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${t.date}</td><td class="py-3 font-medium">${fObj ? fObj.name : 'Unknown'}</td><td class="py-3 font-medium">${toObj ? toObj.name : 'Unknown'}</td><td class="py-3 font-bold text-indigo-600">₹${t.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="triggerEdit('transfers', '${t.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="executeDelete('transfers', '${t.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                trnTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${t.date}</td><td class="py-3 font-medium">${fObj ? fObj.name : 'Unknown'}</td><td class="py-3 font-medium">${toObj ? toObj.name : 'Unknown'}</td><td class="py-3 font-bold text-indigo-600">₹${t.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="window.triggerEdit('transfers', '${t.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="window.executeDelete('transfers', '${t.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
 
-            // Populate Loans Rows
             const loanTable = document.getElementById('loansTableBody'); let fLoans = getFilteredData(state.loans); loanTable.innerHTML = fLoans.length ? '' : '<tr><td colspan="7" class="py-4 text-center text-gray-400">No accounts open.</td></tr>';
             fLoans.forEach(l => {
                 let u = state.users.find(usr => usr.id === l.userId); let b = l.type === 'Taken' ? 'bg-amber-50 text-amber-700' : 'bg-purple-50 text-purple-700';
-                loanTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${l.date}</td><td class="py-3"><span class="px-2 py-0.5 rounded text-xs font-bold ${b}">${l.type}</span></td><td class="py-3 font-medium">${u ? u.name : 'Unknown'}</td><td class="py-3 font-semibold">${l.provider}</td><td class="py-3 text-gray-400">₹${l.total.toLocaleString('en-IN')}</td><td class="py-3 font-bold text-rose-500">₹${l.remaining.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2">${l.remaining > 0 ? `<button onclick="openPaybackModal('${l.id}')" class="text-xs font-bold bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg hover:bg-emerald-100 font-mono">+ Payback</button>` : `<span class="text-xs font-bold text-emerald-600"><i class="fa-solid fa-circle-check"></i> Paid</span>`}<button onclick="triggerEdit('loans', '${l.id}')" class="text-indigo-600 hover:text-indigo-800 text-xs"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="executeDelete('loans', '${l.id}')" class="text-rose-500 hover:text-rose-700 text-xs"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                loanTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${l.date}</td><td class="py-3"><span class="px-2 py-0.5 rounded text-xs font-bold ${b}">${l.type}</span></td><td class="py-3 font-medium">${u ? u.name : 'Unknown'}</td><td class="py-3 font-semibold">${l.provider}</td><td class="py-3 text-gray-400">₹${l.total.toLocaleString('en-IN')}</td><td class="py-3 font-bold text-rose-500">₹${l.remaining.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2">${l.remaining > 0 ? `<button onclick="window.openPaybackModal('${l.id}')" class="text-xs font-bold bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg hover:bg-emerald-100 font-mono">+ Payback</button>` : `<span class="text-xs font-bold text-emerald-600"><i class="fa-solid fa-circle-check"></i> Paid</span>`}<button onclick="window.triggerEdit('loans', '${l.id}')" class="text-indigo-600 hover:text-indigo-800 text-xs"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="window.executeDelete('loans', '${l.id}')" class="text-rose-500 hover:text-rose-700 text-xs"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
 
-            // Populate Loan History Rows
             const histTable = document.getElementById('loanHistoryTableBody'); let fHist = getFilteredData(state.loanHistory); histTable.innerHTML = fHist.length ? '' : '<tr><td colspan="6" class="py-4 text-center text-gray-400">No logs found.</td></tr>';
             fHist.forEach(lh => {
                 let b = lh.type === 'Taken' ? 'bg-orange-50 text-orange-700' : 'bg-teal-50 text-teal-700';
-                histTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${lh.date}</td><td class="py-3 font-semibold">${lh.providerName}</td><td class="py-3 text-gray-600">${lh.userName}</td><td class="py-3"><span class="px-2 py-0.5 rounded text-xs font-bold ${b}">${lh.type === 'Taken' ? 'Paid Installment' : 'Recovered'}</span></td><td class="py-3 font-bold text-emerald-600">₹${lh.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right"><button onclick="executeDelete('loanHistory', '${lh.id}')" class="text-rose-400 hover:text-rose-600"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                histTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${lh.date}</td><td class="py-3 font-semibold">${lh.providerName}</td><td class="py-3 text-gray-600">${lh.userName}</td><td class="py-3"><span class="px-2 py-0.5 rounded text-xs font-bold ${b}">${lh.type === 'Taken' ? 'Paid Installment' : 'Recovered'}</span></td><td class="py-3 font-bold text-emerald-600">₹${lh.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right"><button onclick="window.executeDelete('loanHistory', '${lh.id}')" class="text-rose-400 hover:text-rose-600"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
 
-            // Populate VC Rows
             const vcTable = document.getElementById('vcTableBody'); let fVC = getFilteredData(state.vc); vcTable.innerHTML = fVC.length ? '' : '<tr><td colspan="6" class="py-4 text-center text-gray-400">No records discovered.</td></tr>';
             fVC.forEach(v => {
                 let u = state.users.find(usr => usr.id === v.userId); let isPaid = v.type === 'Paid';
-                vcTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${v.date}</td><td class="py-3 font-medium">${v.name}</td><td class="py-3 text-gray-600">${u ? u.name : 'System'}</td><td class="py-3"><span class="px-2 py-0.5 rounded font-bold text-xs ${isPaid ? 'bg-orange-50 text-orange-700' : 'bg-emerald-50 text-emerald-700'}">${isPaid ? 'Paid Premium' : 'VC Opened'}</span></td><td class="py-3 font-bold ${isPaid ? 'text-rose-600' : 'text-emerald-600'}">₹${v.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="triggerEdit('vc', '${v.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="executeDelete('vc', '${v.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                vcTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${v.date}</td><td class="py-3 font-medium">${v.name}</td><td class="py-3 text-gray-600">${u ? u.name : 'System'}</td><td class="py-3"><span class="px-2 py-0.5 rounded font-bold text-xs ${isPaid ? 'bg-orange-50 text-orange-700' : 'bg-emerald-50 text-emerald-700'}">${isPaid ? 'Paid Premium' : 'VC Opened'}</span></td><td class="py-3 font-bold ${isPaid ? 'text-rose-600' : 'text-emerald-600'}">₹${v.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="window.triggerEdit('vc', '${v.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="window.executeDelete('vc', '${v.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
 
-            // Populate Trust Rows
             const trustTable = document.getElementById('trustTableBody'); let fTrust = getFilteredData(state.trust); trustTable.innerHTML = fTrust.length ? '' : '<tr><td colspan="5" class="py-4 text-center text-gray-400">No vault parameters loaded.</td></tr>';
             fTrust.forEach(tr => {
                 let u = state.users.find(usr => usr.id === tr.userId); let isDep = tr.type === 'Deposit';
-                trustTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${tr.date}</td><td class="py-3 font-medium">${u ? u.name : 'System'}</td><td class="py-3"><span class="px-2 py-0.5 rounded font-bold text-xs ${isDep ? 'bg-blue-50 text-blue-700' : 'bg-teal-50 text-teal-700'}">${isDep ? 'Vault Deposit' : 'Vault Withdrawal'}</span></td><td class="py-3 font-bold ${isDep ? 'text-blue-600' : 'text-teal-600'}">₹${tr.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="triggerEdit('trust', '${tr.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="executeDelete('trust', '${tr.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
+                trustTable.innerHTML += `<tr><td class="py-3 text-gray-400 text-xs">${tr.date}</td><td class="py-3 font-medium">${u ? u.name : 'System'}</td><td class="py-3"><span class="px-2 py-0.5 rounded font-bold text-xs ${isDep ? 'bg-blue-50 text-blue-700' : 'bg-teal-50 text-teal-700'}">${isDep ? 'Vault Deposit' : 'Vault Withdrawal'}</span></td><td class="py-3 font-bold ${isDep ? 'text-blue-600' : 'text-teal-600'}">₹${tr.amount.toLocaleString('en-IN')}</td><td class="py-3 text-right space-x-2"><button onclick="window.triggerEdit('trust', '${tr.id}')" class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="window.executeDelete('trust', '${tr.id}')" class="text-rose-500 hover:text-rose-700"><i class="fa-solid fa-trash"></i></button></td></tr>`;
             });
-        }
+        };
 
         function updateDropdowns() {
             const dropdownIds = ['incUser', 'expUser', 'loanUser', 'trnFromUser', 'trnToUser', 'vcUser', 'trustUser'];
@@ -710,8 +683,6 @@
                 if(savedVC) vcSelect.value = savedVC;
             }
         }
-
-        switchTab('dashboard');
     </script>
 </body>
 </html>
