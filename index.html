@@ -117,13 +117,14 @@
                         <input type="date" id="globalDateFilter" onchange="window.renderAllData()" class="bg-transparent border-none text-xs outline-none text-gray-700 w-24 md:w-auto">
                         <button onclick="window.clearDateFilter()" class="text-xxs text-gray-400 hover:text-gray-600 font-medium">Clear</button>
                     </div>
-                    <button id="headerActionButton" onclick="window.openCurrentModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 md:px-4 py-2 rounded-xl text-xs font-semibold shadow-sm hidden whitespace-nowrap"></button>
+                    <button id="headerActionButton" onclick="window.openCurrentModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 md:px-4 py-2 rounded-xl text-xs font-semibold shadow-sm transition-all hidden whitespace-nowrap"></button>
                 </div>
             </header>
 
             <main class="p-4 md:p-8 max-w-7xl w-full mx-auto flex-1">
                 <!-- ================= DASHBOARD TAB ================= -->
                 <div id="content-dashboard" class="tab-content space-y-4 md:space-y-8">
+                    <!-- Stats Grid -->
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         <div class="bg-white p-4 md:p-5 rounded-2xl border border-gray-100 shadow-sm">
                             <p class="text-xxs text-gray-400 font-medium uppercase tracking-wider">Total Income</p>
@@ -166,7 +167,7 @@
                     </div>
 
                     <div class="bg-white p-4 md:p-6 rounded-2xl border border-gray-100 shadow-sm">
-                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-indigo-500 mr-2"></i> Real-time Member Dynamic Wallets</h4>
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-indigo-500 mr-2"></i> Real-time Member Hand Wallets</h4>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="dashboardWalletsGrid"></div>
                     </div>
                 </div>
@@ -364,8 +365,8 @@
         import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
         import { getFirestore, collection, doc, setDoc, addDoc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-        // 🔥 OUPER DIYE GAYE FIREBASE CONFIG YAHA REPEAT PASTE KAREIN
-      const firebaseConfig = {
+        // ⚠️ YAHA APNI FIREBASE CONFIG COPY-PASTE KAREIN
+       const firebaseConfig = {
               apiKey: "AIzaSyCWco2lP70IHiJZAtO3geie951wMW-nD7w",
               authDomain: "safi-dashboard-6b762.firebaseapp.com",
               projectId: "safi-dashboard-6b762",
@@ -413,7 +414,8 @@
             collections.forEach(colKey => {
                 onSnapshot(collection(db, colKey), (snapshot) => {
                     let items = []; snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
-                    state[colKey] = items; window.renderAllData();
+                    state[colKey] = items; 
+                    window.renderAllData();
                 });
             });
         }
@@ -443,7 +445,6 @@
         window.promptQuickLender = async function() { const name = prompt("Lender Name:"); if(name) await addDoc(collection(db, 'lenders'), { name: name.trim() }); };
         window.promptQuickVCName = async function() { const name = prompt("VC Name:"); if(name) await addDoc(collection(db, 'vcPoolNames'), { name: name.trim() }); };
 
-        // --- PURE DYNAMIC REAL-TIME CONTEXT ENGINE BALANCE CALCULATOR ---
         function calculateUserWalletSplit(userId) {
             let u = state.users.find(usr => usr.id === userId); if (!u) return { cash: 0, bank: 0 };
             
@@ -455,13 +456,11 @@
             let trfOutBank = state.transfers.filter(t => t.fromId === userId && t.mode === 'Bank').reduce((a,c) => a + c.amount, 0);
             let trfIn = state.transfers.filter(t => t.toId === userId).reduce((a,c) => a + c.amount, 0);
             
-            // 🚨 LOAN BALANCES DIRECT CORES REAL TIME HOOKS
             let loanTakenCash = state.loans.filter(l => l.userId === userId && l.type === 'Taken' && l.mode === 'Cash').reduce((a,c) => a + c.total, 0);
             let loanTakenBank = state.loans.filter(l => l.userId === userId && l.type === 'Taken' && l.mode === 'Bank').reduce((a,c) => a + c.total, 0);
             let loanGivenCash = state.loans.filter(l => l.userId === userId && l.type === 'Given' && l.mode === 'Cash').reduce((a,c) => a + c.total, 0);
             let loanGivenBank = state.loans.filter(l => l.userId === userId && l.type === 'Given' && l.mode === 'Bank').reduce((a,c) => a + c.total, 0);
 
-            // 🚨 REAL TIME DEDUCTION OF LOAN KISHT (PAYBACKS) LOGS DIRECTLY FROM THE SENDER WALLET
             let paybackPaidCash = state.loanHistory.filter(lh => lh.loanId && state.loans.find(l=>l.id === lh.loanId)?.userId === userId && lh.type === 'Taken' && lh.mode === 'Cash').reduce((a,c) => a + c.amount, 0);
             let paybackPaidBank = state.loanHistory.filter(lh => lh.loanId && state.loans.find(l=>l.id === lh.loanId)?.userId === userId && lh.type === 'Taken' && lh.mode === 'Bank').reduce((a,c) => a + c.amount, 0);
             let paybackRecCash = state.loanHistory.filter(lh => lh.loanId && state.loans.find(l=>l.id === lh.loanId)?.userId === userId && lh.type === 'Given' && lh.mode === 'Cash').reduce((a,c) => a + c.amount, 0);
@@ -541,6 +540,16 @@
             else if(colKey === 'trust') { document.querySelector(`input[name="trustType"][value="${obj.type}"]`).checked = true; window.toggleTrustTypeStyle(); document.getElementById('trustUser').value = obj.userId; document.getElementById('trustAmount').value = obj.amount; document.getElementById('trustMode').value = obj.mode || 'Cash'; document.getElementById('trustDate').value = obj.date; openCurrentModal('form-trust'); }
         };
 
+        window.openPaybackModal = function(loanId) {
+            let l = state.loans.find(loan => loan.id === loanId); if(!l) return;
+            document.getElementById('paybackLoanId').value = loanId; document.getElementById('paybackCurrentRemaining').value = l.remaining;
+            document.getElementById('paybackSubtitle').innerText = `${l.type === 'Taken' ? 'Repaying Back To' : 'Recovering From'} ${l.provider}`;
+            document.getElementById('pbLabelCurrent').innerText = '₹' + l.remaining.toLocaleString('en-IN');
+            document.getElementById('pbLabelNewRemaining').innerText = '₹' + l.remaining.toLocaleString('en-IN');
+            document.getElementById('paybackAmount').value = '';
+            window.openCurrentModal('form-payback');
+        };
+
         function buildDynamicDashboardGraphs() {
             const ctx1 = document.getElementById('chartIncomeExpense'); const ctx2 = document.getElementById('chartAssetDistribution'); if(!ctx1 || !ctx2) return;
             if(chart1Instance) chart1Instance.destroy(); if(chart2Instance) chart2Instance.destroy();
@@ -559,7 +568,6 @@
             let totalInc = state.income.reduce((acc, curr) => acc + curr.amount, 0);
             let totalExp = state.expenses.reduce((acc, curr) => acc + curr.amount, 0);
             
-            // Fixed Math integration updates across pipelines
             let loanTakenRemaining = state.loans.filter(l => l.type === 'Taken').reduce((a, c) => a + c.remaining, 0);
             let loanGivenRemaining = state.loans.filter(l => l.type === 'Given').reduce((a, c) => a + c.remaining, 0);
             let computedLoanBurdenWeight = loanTakenRemaining - loanGivenRemaining;
@@ -567,7 +575,6 @@
             let trustPoolBalance = state.trust.filter(t => t.type === 'Deposit').reduce((a,c) => a + c.amount, 0) - state.trust.filter(t => t.type === 'Withdraw').reduce((a,c) => a + c.amount, 0);
             let vcPoolInvested = state.vc.filter(v => v.type === 'Paid').reduce((a,c) => a + c.amount, 0) - state.vc.filter(v => v.type === 'Received').reduce((a,c) => a + c.amount, 0);
             
-            // Adjust net liquid system to auto calculate dynamic ledger pipelines accurately
             let netAvailable = totalOpening + totalInc - totalExp;
 
             document.getElementById('statIncome').innerText = '₹' + totalInc.toLocaleString('en-IN');
